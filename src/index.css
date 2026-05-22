@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @tailwind base;
@@ -6,7 +6,9 @@
 @tailwind utilities;
 
 :root {
-  --color-amber: 245 158 11;
+  --color-amber: 214 150 64;
+  --color-gold: 255 209 143;
+  --color-ink: 8 6 11;
 }
 
 * {
@@ -19,11 +21,16 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Source Sans 3', 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #08060b;
+  background-image: radial-gradient(1200px 600px at 50% -10%, rgba(255, 203, 128, 0.16), rgba(8, 6, 11, 0) 60%);
+  color: #f7f4ee;
+  letter-spacing: 0.01em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', 'Inter', sans-serif;
+  font-family: 'Playfair Display', 'Inter', serif;
+  letter-spacing: -0.015em;
 }
 
 /* Custom scrollbar */
@@ -36,17 +43,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(245, 158, 11, 0.3);
+  background: rgba(245, 174, 80, 0.35);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(245, 158, 11, 0.5);
+  background: rgba(245, 174, 80, 0.55);
 }
 
 /* Selection color */
 ::selection {
-  background: rgba(245, 158, 11, 0.3);
+  background: rgba(245, 174, 80, 0.35);
   color: white;
 }
 
@@ -69,11 +76,11 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes pulse-glow-strong {
   0%, 100% { 
     opacity: 0.3;
-    box-shadow: 0 0 20px rgba(245, 158, 11, 0.1), inset 0 0 20px rgba(245, 158, 11, 0.05);
+    box-shadow: 0 0 20px rgba(245, 174, 80, 0.1), inset 0 0 20px rgba(245, 174, 80, 0.05);
   }
   50% { 
     opacity: 0.6;
-    box-shadow: 0 0 40px rgba(245, 158, 11, 0.3), inset 0 0 30px rgba(245, 158, 11, 0.1);
+    box-shadow: 0 0 40px rgba(245, 174, 80, 0.3), inset 0 0 30px rgba(245, 174, 80, 0.1);
   }
 }
 
@@ -85,12 +92,12 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes border-pulse {
   0%, 100% { 
-    border-color: rgba(245, 158, 11, 0.3);
-    box-shadow: 0 0 15px rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 174, 80, 0.3);
+    box-shadow: 0 0 15px rgba(245, 174, 80, 0.1);
   }
   50% { 
-    border-color: rgba(245, 158, 11, 0.6);
-    box-shadow: 0 0 30px rgba(245, 158, 11, 0.25);
+    border-color: rgba(245, 174, 80, 0.6);
+    box-shadow: 0 0 30px rgba(245, 174, 80, 0.25);
   }
 }
 
@@ -152,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.4), transparent, rgba(245, 158, 11, 0.2));
+  background: linear-gradient(135deg, rgba(245, 174, 80, 0.4), transparent, rgba(245, 174, 80, 0.2));
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: -1;
@@ -287,6 +294,9 @@ h1, h2, h3, h4, h5, h6 {
 .btn-premium {
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(255, 208, 140, 0.35);
+  box-shadow: 0 30px 60px -35px rgba(245, 174, 80, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
 }
 
 .btn-premium::before {
@@ -309,6 +319,62 @@ h1, h2, h3, h4, h5, h6 {
   left: 100%;
 }
 
+.btn-premium:hover {
+  border-color: rgba(255, 220, 160, 0.7);
+  box-shadow: 0 40px 70px -40px rgba(245, 174, 80, 0.55), 0 0 40px rgba(245, 174, 80, 0.15);
+}
+
+.btn-premium-outline {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn-premium-outline:hover {
+  border-color: rgba(255, 210, 150, 0.5);
+  box-shadow: 0 18px 40px -30px rgba(245, 174, 80, 0.3);
+}
+
+.premium-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 32px 70px -50px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.premium-card:hover {
+  border-color: rgba(245, 182, 90, 0.35);
+  box-shadow: 0 40px 85px -55px rgba(0, 0, 0, 0.9), 0 0 45px rgba(245, 174, 80, 0.12);
+}
+
+.premium-icon {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 18px 35px -25px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.premium-icon::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.input-premium {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 14px 40px -28px rgba(0, 0, 0, 0.7);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.input-premium:focus {
+  border-color: rgba(245, 182, 90, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 1px rgba(245, 182, 90, 0.3), 0 24px 50px -35px rgba(245, 174, 80, 0.4);
+}
+
 /* Gallery item frame effect */
 .gallery-frame {
   position: relative;
@@ -318,7 +384,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   position: absolute;
   inset: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: inherit;
   pointer-events: none;
   z-index: 10;
@@ -328,9 +394,12 @@ h1, h2, h3, h4, h5, h6 {
 .grain-overlay {
   position: fixed;
   inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.03;
+  opacity: 0.045;
+  mix-blend-mode: soft-light;
 }
 
 /* Backdrop blur enhancements */
@@ -352,6 +421,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Smooth section transitions */
 section {
   position: relative;
+  scroll-margin-top: 120px;
 }
 
 /* Floating orb animations */

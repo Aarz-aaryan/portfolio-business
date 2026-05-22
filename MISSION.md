@@ -17,7 +17,7 @@ Build a portfolio website business targeting students, researchers, and small bu
 ## What's Done
 - Repo: https://github.com/Aarz-aaryan/portfolio-business
 - **Live site: https://portfolio-business-ivory.vercel.app**
-- **Latest commit: `400ddd95`** (premium upgrade v2)
+- **Latest commit: `9a64223`** (pricing update v3 — Starter $149, Pro $299, Premium $499)
 - All 6 sections live with premium animations
 
 ## What's Left
