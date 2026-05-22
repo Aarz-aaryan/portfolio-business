@@ -190,21 +190,21 @@ function App() {
   const pricingTiers = [
     {
       name: 'Starter',
-      price: '$299',
+      price: '$149',
       description: 'Perfect for students getting started',
       features: ['Single page portfolio', 'Responsive design', '3 revisions', '2-week delivery', 'Hosting included'],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$599',
+      price: '$299',
       description: 'Most popular for researchers',
       features: ['Multi-section portfolio', 'Custom domain setup', 'SEO optimization', '5 revisions', '1-week delivery', 'Contact form', 'Analytics'],
       popular: true
     },
     {
       name: 'Premium',
-      price: '$999',
+      price: '$499',
       description: 'For established academics',
       features: ['Full website with blog', 'Advanced animations', 'Analytics dashboard', 'Unlimited revisions', 'Priority support', 'Social media integration', 'Custom branding'],
       popular: false

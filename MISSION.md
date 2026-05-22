@@ -17,8 +17,8 @@ Build a portfolio website business targeting students, researchers, and small bu
 ## What's Done
 - Repo: https://github.com/Aarz-aaryan/portfolio-business
 - **Live site: https://portfolio-business-ivory.vercel.app**
-- Commit: `c56a6e5403e3f69348c9ae17c71af4404f813346`
-- All 6 sections live: Hero, Services, Pricing, Gallery, About, Contact
+- **Latest commit: `400ddd95`** (premium upgrade v2)
+- All 6 sections live with premium animations
 
 ## What's Left
 - Client acquisition (social media, campus outreach, referrals)
