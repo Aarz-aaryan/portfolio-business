@@ -4,26 +4,29 @@
 Build a portfolio website business targeting students, researchers, and small businesses in University City, Philadelphia. Deliver high-quality, affordable custom portfolios.
 
 ## Status
-Planning
+✅ Landing page live
 
 ## Progress
 - [x] GitHub repo created
-- [ ] Define service offerings and pricing
-- [ ] Identify target customer segments
-- [ ] Build initial website/landing page
-- [ ] Acquire first clients
+- [x] Landing page built and deployed
+- [ ] Define service offerings and pricing — DONE ($299/$599/$999 tiers)
+- [ ] Identify target customer segments — DONE (UPenn/Drexel students, researchers)
+- [ ] Client acquisition channel established
+- [ ] First clients
 
 ## What's Done
-- Repo initialized: https://github.com/Aarz-aaryan/portfolio-business
+- Repo: https://github.com/Aarz-aaryan/portfolio-business
+- **Live site: https://portfolio-business-ivory.vercel.app**
+- Commit: `c56a6e5403e3f69348c9ae17c71af4404f813346`
+- All 6 sections live: Hero, Services, Pricing, Gallery, About, Contact
 
 ## What's Left
-- Define services, pricing, target market
-- Build business landing page
-- Establish client acquisition channel
-- First client delivery
+- Client acquisition (social media, campus outreach, referrals)
+- First paying client
 
 ## Issues/Blockers
-- None yet
+- None
 
 ## Key Decisions
-- TBD
+- Pricing: $299 starter / $599 professional / $999 premium
+- Target: UPenn/Drexel students, researchers, small businesses
