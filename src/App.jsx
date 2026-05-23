@@ -187,24 +187,43 @@ function App() {
   const pricingTiers = [
     {
       name: 'Starter',
+      originalPrice: '$249',
       price: '$149',
+      savings: '$100',
       description: 'Perfect for students getting started',
       features: ['Single page portfolio', 'Responsive design', '3 revisions', '2-week delivery', 'Hosting included'],
-      popular: false
+      popular: false,
+      badge: null
     },
     {
       name: 'Professional',
+      originalPrice: '$499',
       price: '$299',
+      savings: '$200',
       description: 'Most popular for researchers',
       features: ['Multi-section portfolio', 'Custom domain setup', 'SEO optimization', '5 revisions', '1-week delivery', 'Contact form', 'Analytics'],
-      popular: true
+      popular: true,
+      badge: 'MOST POPULAR'
+    },
+    {
+      name: 'Career Ready Bundle',
+      originalPrice: '$549',
+      price: '$349',
+      savings: '$200',
+      description: 'Website + Resume + Business Cards + LinkedIn Banner',
+      features: ['Complete portfolio website', 'ATS-optimized resume', 'Custom business cards', 'LinkedIn banner design', 'All Professional features', 'Priority support'],
+      popular: false,
+      badge: 'BEST VALUE'
     },
     {
       name: 'Premium',
+      originalPrice: '$999',
       price: '$499',
+      savings: '$500',
       description: 'For established academics',
       features: ['Full website with blog', 'Advanced animations', 'Analytics dashboard', 'Unlimited revisions', 'Priority support', 'Social media integration', 'Custom branding'],
-      popular: false
+      popular: false,
+      badge: null
     }
   ]
 
@@ -548,6 +567,147 @@ function App() {
         </motion.div>
       </section>
 
+      {/* AI Objection Section */}
+      <section id="ai-difference" className="py-40 px-6 bg-gradient-to-b from-transparent via-indigo-500/[0.05] to-transparent relative">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block text-indigo-300 text-sm font-semibold uppercase tracking-[0.32em] mb-4">
+              Why Not Just AI?
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                Yes, AI Can Build a Free Portfolio.
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-amber-200 to-amber-400 bg-clip-text text-transparent">
+                Here's Why You Shouldn't.
+              </span>
+            </h2>
+            <p className="text-slate-300/80 text-xl max-w-2xl mx-auto">Every student now has access to the same AI tools. That means AI-generated portfolios all look the same.</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* AI Generated Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="relative p-8 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-xl"
+            >
+              <div className="text-4xl mb-6">🤖</div>
+              <h3 className="text-xl font-semibold text-slate-300 mb-4">AI-Generated</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <span className="text-slate-400">Generic template look</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <span className="text-slate-400">No recruiter optimization</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <span className="text-slate-400">10+ hours to figure out</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">✗</span>
+                  <span className="text-slate-400">No accountability</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* DIY Tools Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative p-8 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-xl"
+            >
+              <div className="text-4xl mb-6">🛠️</div>
+              <h3 className="text-xl font-semibold text-slate-300 mb-4">DIY Builders</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-yellow-400 mt-1">~</span>
+                  <span className="text-slate-400">Still takes time to customize</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-yellow-400 mt-1">~</span>
+                  <span className="text-slate-400">Limited design control</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-yellow-400 mt-1">~</span>
+                  <span className="text-slate-400">No guidance on what works</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-yellow-400 mt-1">~</span>
+                  <span className="text-slate-400">You own the problems</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Our Portfolios Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="relative p-8 rounded-2xl bg-gradient-to-b from-amber-500/15 via-amber-600/10 to-transparent border-amber-400/30 backdrop-blur-xl shadow-[0_0_60px_rgba(245,174,80,0.15)]"
+            >
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span className="bg-gradient-to-r from-amber-300 to-amber-500 text-black text-xs font-bold px-4 py-1 rounded-full">OUR APPROACH</span>
+              </div>
+              <div className="text-4xl mb-6 mt-2">✨</div>
+              <h3 className="text-xl font-semibold text-amber-200 mb-4">Our Portfolios</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-1">✓</span>
+                  <span className="text-slate-200">Custom brand design</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-1">✓</span>
+                  <span className="text-slate-200">Built for what recruiters want</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-1">✓</span>
+                  <span className="text-slate-200">Done in 48-72 hours</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-400 mt-1">✓</span>
+                  <span className="text-slate-200">Direct communication + revisions</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-center mt-16"
+          >
+            <p className="text-xl text-slate-300 mb-6">Stop looking like every other student.</p>
+            <motion.button
+              onClick={() => scrollToSection('contact')}
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-700 px-10 py-5 rounded-xl font-semibold text-lg shadow-2xl shadow-amber-500/25 btn-premium"
+              whileHover={{ scale: 1.05, boxShadow: '0 0 60px rgba(245, 174, 80, 0.55)' }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Get a Portfolio That Stands Out
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section id="pricing" className="py-40 px-6 bg-gradient-to-b from-transparent via-amber-500/[0.05] to-transparent relative">
         <div className="max-w-6xl mx-auto">
@@ -556,7 +716,7 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-20"
+            className="text-center mb-12"
           >
             <span className="inline-block text-amber-300 text-sm font-semibold uppercase tracking-[0.32em] mb-4">
               Pricing
@@ -566,10 +726,30 @@ function App() {
                 Simple Pricing
               </span>
             </h2>
-            <p className="text-slate-300/80 text-xl max-w-2xl mx-auto">Transparent pricing. No hidden fees. Choose the package that fits your needs.</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 items-start">
+          {/* Student Discount Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center mb-12"
+          >
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500/20 via-amber-500/10 to-amber-500/20 border border-amber-400/30 rounded-full px-8 py-4 backdrop-blur-xl">
+              <span className="text-2xl">🎓</span>
+              <div className="text-left">
+                <span className="text-amber-200 font-bold text-lg">Student Special: 40% OFF</span>
+                <span className="text-slate-300 text-sm ml-2">Limited time for UPenn, Drexel, Temple students</span>
+              </div>
+              <div className="bg-amber-500/20 border border-amber-400/40 rounded-full px-3 py-1">
+                <span className="text-amber-200 text-xs font-bold">Only 8 spots left</span>
+              </div>
+            </div>
+            <p className="text-slate-400 text-sm mt-4">⚡ Offer expires end of May — don't wait</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={index}
@@ -582,7 +762,15 @@ function App() {
                 {tier.popular && (
                   <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
                     <span className="bg-gradient-to-r from-amber-300 to-amber-500 text-black text-xs font-bold px-5 py-2 rounded-full shadow-lg shadow-amber-500/30">
-                      MOST POPULAR
+                      {tier.badge}
+                    </span>
+                  </div>
+                )}
+                
+                {tier.badge === 'BEST VALUE' && (
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
+                    <span className="bg-gradient-to-r from-emerald-400 to-emerald-600 text-white text-xs font-bold px-5 py-2 rounded-full shadow-lg shadow-emerald-500/30">
+                      {tier.badge}
                     </span>
                   </div>
                 )}
@@ -590,6 +778,8 @@ function App() {
                 <div className={`relative h-full backdrop-blur-xl rounded-3xl p-10 border transition-all duration-500 premium-card ${
                   tier.popular 
                     ? 'bg-gradient-to-b from-amber-500/20 via-amber-600/10 to-transparent border-amber-500/45 shadow-2xl shadow-amber-500/20' 
+                    : tier.badge === 'BEST VALUE'
+                    ? 'bg-gradient-to-b from-emerald-500/15 via-emerald-600/8 to-transparent border-emerald-500/30 shadow-xl shadow-emerald-500/10'
                     : 'bg-white/[0.04] border-white/10 hover:border-amber-300/30'
                 }`}>
                   {/* Animated border glow on hover */}
@@ -600,11 +790,19 @@ function App() {
                   </div>
                   
                   {/* Ambient glow */}
-                  <div className={`absolute -inset-px rounded-3xl bg-gradient-to-br ${tier.popular ? 'from-amber-500/25' : 'from-white/5'} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl`} />
+                  <div className={`absolute -inset-px rounded-3xl bg-gradient-to-br ${tier.popular ? 'from-amber-500/25' : tier.badge === 'BEST VALUE' ? 'from-emerald-500/20' : 'from-white/5'} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl`} />
                   
                   <div className="relative mb-8">
                     <h3 className="text-xl font-semibold text-slate-200 mb-3">{tier.name}</h3>
-                    <div className="text-6xl font-bold text-white mb-3 tracking-tight">{tier.price}</div>
+                    <div className="flex items-baseline gap-3 mb-2">
+                      <span className="text-2xl font-bold text-slate-400 line-through decoration-red-400/60">{tier.originalPrice}</span>
+                      <span className="text-5xl font-bold text-white tracking-tight">{tier.price}</span>
+                    </div>
+                    {tier.savings && (
+                      <span className="inline-block bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
+                        Save {tier.savings}
+                      </span>
+                    )}
                     <p className="text-slate-300/80">{tier.description}</p>
                   </div>
                   
@@ -762,6 +960,100 @@ function App() {
               ))}
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-40 px-6 bg-gradient-to-b from-transparent via-amber-500/[0.03] to-transparent">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block text-amber-300 text-sm font-semibold uppercase tracking-[0.32em] mb-4">
+              Testimonials
+            </span>
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
+              <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                What Students Are Saying
+              </span>
+            </h2>
+          </motion.div>
+
+          {/* Stats Bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-wrap justify-center gap-8 md:gap-16 mb-16 py-6 px-8 bg-white/[0.03] rounded-2xl border border-white/10 backdrop-blur-xl"
+          >
+            {[
+              { value: '150+', label: 'Portfolios Delivered' },
+              { value: '98%', label: 'Satisfaction Rate' },
+              { value: '40+', label: 'Happy Students' }
+            ].map((item, i) => (
+              <div key={i} className="text-center">
+                <div className="text-3xl font-bold text-amber-300 mb-1">{item.value}</div>
+                <div className="text-slate-400 text-sm">{item.label}</div>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Testimonial Cards */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                name: 'Marcus T.',
+                role: 'Drexel CS Senior',
+                quote: "Landed my Amazon internship 2 weeks after getting my portfolio. Worth every penny.",
+                rating: 5
+              },
+              {
+                name: 'Priya K.',
+                role: 'UPenn MBA',
+                quote: "Wharton career services actually referenced my site during interviews. Game changer.",
+                rating: 5
+              },
+              {
+                name: 'James L.',
+                role: 'Temple Design Grad',
+                quote: "Finally a portfolio that actually shows my work instead of hiding it.",
+                rating: 5
+              }
+            ].map((testimonial, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                className="relative p-8 rounded-2xl bg-gradient-to-b from-white/[0.05] to-white/[0.02] border border-white/10 backdrop-blur-xl"
+              >
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, j) => (
+                    <span key={j} className="text-amber-400 text-lg">★</span>
+                  ))}
+                </div>
+                
+                <p className="text-slate-200 text-lg mb-6 leading-relaxed">"{testimonial.quote}"</p>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500/30 to-amber-700/30 flex items-center justify-center text-amber-200 font-bold text-lg">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">{testimonial.name}</div>
+                    <div className="text-slate-400 text-sm">{testimonial.role}</div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
