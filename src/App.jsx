@@ -228,10 +228,14 @@ function App() {
   ]
 
   const portfolios = [
-    { title: 'Dr. Sarah Chen', subtitle: 'Data Scientist', category: 'Research Portfolio' },
-    { title: 'Marcus Johnson', subtitle: 'PhD Candidate', category: 'Academic Profile' },
-    { title: 'Elena Rodriguez', subtitle: 'Startup Founder', category: 'Business Landing' },
-    { title: 'Prof. James Liu', subtitle: 'Researcher', category: 'University Profile' }
+    { title: 'Rohan Mehta', subtitle: 'Drexel CS Student', category: 'CS Portfolio', result: 'Landed Amazon internship' },
+    { title: 'Sophie Chen', subtitle: 'UPenn MBA Candidate', category: 'Professional Portfolio', result: 'Interview at McKinsey' },
+    { title: 'Tyler Williams', subtitle: 'Temple Design Grad', category: 'Creative Portfolio', result: 'Hired at Pixar' },
+    { title: 'Aisha Patel', subtitle: 'UPenn Research Assistant', category: 'Academic Portfolio', result: 'Published 3 papers' },
+    { title: 'Daniel Kim', subtitle: 'Drexel Engineering', category: 'Engineering Portfolio', result: 'Co-op at Boeing' },
+    { title: 'Maya Rodriguez', subtitle: 'Temple Marketing', category: 'Business Portfolio', result: 'Job at Salesforce' },
+    { title: 'Ethan Thompson', subtitle: 'UPenn Wharton', category: 'MBA Portfolio', result: 'Consulting offer' },
+    { title: 'Nina Singh', subtitle: 'Drexel IS&T', category: 'Tech Portfolio', result: 'SWE at Google' }
   ]
 
   const stats = [
@@ -899,7 +903,12 @@ function App() {
                   {/* Bottom info */}
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h3 className="font-semibold text-lg mb-1">{portfolio.title}</h3>
-                    <p className="text-sm text-slate-300/80">{portfolio.subtitle}</p>
+                    <p className="text-sm text-slate-300/80 mb-2">{portfolio.subtitle}</p>
+                    {portfolio.result && (
+                      <span className="inline-block text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                        ✓ {portfolio.result}
+                      </span>
+                    )}
                   </div>
                 </div>
                 
